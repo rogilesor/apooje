@@ -4,6 +4,16 @@ function onReady(){
 	updateClock();
 }
 
+function createClock(){
+	var c = new Object();
+		c.updateClock = function(){
+			var date = new Date();		
+			var clock = document.getElementById('clock');
+			clock.innerHTML = date.getHours()+" : "+date.getMinutes()+ " : "+ date.getSeconds();
+		}
+	return c ;
+}
+
 function updateClock(){
 	var date = new Date();
 	//console.log(date);
