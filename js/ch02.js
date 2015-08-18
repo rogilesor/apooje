@@ -1,7 +1,8 @@
 function onReady(){
 	console.log('Hello Chapter 2');
-	setInterval(updateClock,1000);
-	updateClock();
+
+	var clock = createClock();
+
 }
 
 function createClock(){
@@ -11,6 +12,10 @@ function createClock(){
 			var clock = document.getElementById('clock');
 			clock.innerHTML = date.getHours()+" : "+date.getMinutes()+ " : "+ date.getSeconds();
 		}
+
+	setInterval(c.updateClock,1000);
+	c.updateClock();
+
 	return c ;
 }
 
