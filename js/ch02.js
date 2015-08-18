@@ -1,15 +1,15 @@
 function onReady(){
 	console.log('Hello Chapter 2');
 
-	var clock = createClock();
-
+	var clock = createClock('clock');
+	var clock2 = createClock('clock2');
 }
 
-function createClock(){
+function createClock(id){
 	var c = new Object();
 		c.updateClock = function(){
 			var date = new Date();		
-			var clock = document.getElementById('clock');
+			var clock = document.getElementById(id);
 			clock.innerHTML = date.getHours()+" : "+date.getMinutes()+ " : "+ date.getSeconds();
 		}
 
