@@ -7,11 +7,11 @@ function onReady(){
 
 function createClock(id){
 	var c = new Object();
-		c.updateClock = function(){
+	c.updateClock = function(){
 			var date = new Date();		
 			var clock = document.getElementById(id);
 			clock.innerHTML = this.formatDigits(date.getHours())+" : "+this.formatDigits(date.getMinutes())+ " : "+ this.formatDigits(date.getSeconds());
-		}
+	}
 
 	c.formatDigits = function(val){
 		if (val<10) val="0" + val ;

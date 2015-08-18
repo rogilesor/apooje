@@ -1,2 +1,3 @@
 Ce dépôt contient mes exercices du cours Object Oriented Javascript
-l'adresse du repository est la suivante : https://github.com/rogilesor/apooje.git
+L'URL de mon repository sur GitHub : https://github.com/rogilesor/apooje.git
+C'est un formation javascript les fichiers avec le plus de commit sont les fichiers html a la racine et le fichier js du chap 2 dans le dossier js
