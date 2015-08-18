@@ -10,7 +10,7 @@ function createClock(id){
 		c.updateClock = function(){
 			var date = new Date();		
 			var clock = document.getElementById(id);
-			clock.innerHTML = date.getHours()+" : "+date.getMinutes()+ " : "+ date.getSeconds();
+			clock.innerHTML = formatDigits(date.getHours())+" : "+formatDigits(date.getMinutes())+ " : "+ formatDigits(date.getSeconds());
 		}
 
 	setInterval(c.updateClock,1000);
