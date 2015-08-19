@@ -1,15 +1,26 @@
 function onReady(){
 	console.log('Hello Chapter 2');
-	var clock1  = new Clock('clock1');
-	var clock2 = new Clock('clock2');
+
+	var clock1  = new Clock('clock1',0,'ETC');
+	var clock2 = new Clock('clock2',120);
+
+	
+
+
 }
 
-function Clock(id){
+function Clock(id, offset,label){
+	offset = offset || 0 ;
+	var d = new Date() ;
+	this.offset = (offset + d.getTimezoneOffset())*60*1000;
+	label = label || '' ;
+
 	this.updateClock = function(){
 //			console.log('this.update actionne')
 			var date = new Date();		
+				date = new Date(this.offset + date.getTime());
 			var clock = document.getElementById(id);
-			clock.innerHTML = this.formatDigits(date.getHours())+" : "+this.formatDigits(date.getMinutes())+ " : "+ this.formatDigits(date.getSeconds());
+			clock.innerHTML = this.formatDigits(date.getHours())+" : "+this.formatDigits(date.getMinutes())+ " : "+ this.formatDigits(date.getSeconds())+" "+label;
 	}
 
 	this.formatDigits = function(val){
